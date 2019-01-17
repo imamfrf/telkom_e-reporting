@@ -43,7 +43,7 @@
             </div>
 
             {{Form::hidden('_method', 'PUT')}}
-            {{Form::submit('Simpan', ['class' => 'btn btn-primary btn-lg btn-block'])}}
+            {{Form::submit('Save', ['class' => 'btn btn-primary btn-lg btn-block'])}}
             {!! Form::close() !!}
             {{--@if(count($errors) > 0)--}}
                 {{--@foreach($errors->all as $error)--}}

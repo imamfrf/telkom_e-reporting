@@ -60,7 +60,7 @@
 
             </div>
 
-            {{Form::submit('Submit', ['class' => 'btn btn-primary btn-lg btn-block'])}}
+            {{Form::submit('Save', ['class' => 'btn btn-primary btn-lg btn-block'])}}
             {!! Form::close() !!}
             <h1></h1>
             <h1></h1>

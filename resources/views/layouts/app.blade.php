@@ -33,7 +33,7 @@ if (!auth()->guest()){
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-light navbar-laravel">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}"><img src="{{asset('logo/logo_telkom.png')}}" width="70" height="37">
                     e-Reporting
@@ -110,7 +110,7 @@ if (!auth()->guest()){
 <footer>
 
     <!-- Copyright -->
-    <div class="text-center py-0" style="color: #3d4852"><font color="#d3d3d3">© 2019 IFF</font>
+    <div class="text-center py-5" style="color: #3d4852"><font color="#d3d3d3" size="2">© 2019 IFF</font>
     </div>
     <!-- Copyright -->
 

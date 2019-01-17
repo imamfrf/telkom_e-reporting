@@ -227,7 +227,7 @@ class PostsController extends Controller
             $user_bud = $user->bud;
             $id = Input::get('id');
             $post = Post::find($id);
-            if ($post->bud == $user_bud){
+            if ($post->bud == $user_bud || $user_bud == 'All'){
                 return view('pages.delete')->with('id', $id);
 
             }

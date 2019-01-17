@@ -19,16 +19,16 @@
                         <?php try{
 
                         ?>
-                            {{Form::select('bud', array('All' => 'All BUD', 'DBS' => 'DBS', 'DGS' => 'DGS', 'DES' => 'DES'), $_GET['bud'])}}
+                            {{Form::select('bud', array('All' => 'All BUD', 'DBS' => 'DBS', 'DGS' => 'DGS', 'DES' => 'DES'), $_GET['bud'], array('onchange' => 'this.form.submit()'))}}
                             @if($_GET['week'] == 'this')
-                                {{Form::radio('week', 'all', false, ['onchange' => 'submitForm()'])}}
+                                {{Form::radio('week', 'all', false, ['onchange' => 'this.form.submit()'])}}
                                 {{Form::label('week1', 'All')}}
-                                {{Form::radio('week', 'this', true, ['onchange' => 'submitForm()'])}}
+                                {{Form::radio('week', 'this', true, ['onchange' => 'this.form.submit()'])}}
                                 {{Form::label('week2', 'Last 7 days')}}
                             @else
-                                {{Form::radio('week', 'all', true)}}
+                                {{Form::radio('week', 'all', true, ['onchange' => 'this.form.submit()'])}}
                                 {{Form::label('week1', 'All')}}
-                                {{Form::radio('week', 'this', false)}}
+                                {{Form::radio('week', 'this', false,['onchange' => 'this.form.submit()'])}}
                                 {{Form::label('week2', 'Last 7 days')}}
 
                             @endif
@@ -38,15 +38,15 @@
                         catch (Exception $e){
                             $_GET['bud'] = 'All';
                             $_GET['week'] = 'all'?>
-                        {{Form::select('bud', array('All' => 'All BUD', 'DBS' => 'DBS', 'DGS' => 'DGS', 'DES' => 'DES'), 'All')}}
-                        {{Form::radio('week', 'all', true)}}
+                        {{Form::select('bud', array('All' => 'All BUD', 'DBS' => 'DBS', 'DGS' => 'DGS', 'DES' => 'DES'), 'All', array('onchange' => 'this.form.submit()'))}}
+                        {{Form::radio('week', 'all', true, ['onchange' => 'this.form.submit()'])}}
                         {{Form::label('week1', 'All')}}
-                        {{Form::radio('week', 'this', false)}}
+                        {{Form::radio('week', 'this', false, ['onchange' => 'this.form.submit()'])}}
                         {{Form::label('week2', 'Last 7 days')}}
 
                         <?php }?>
 
-                        {{Form::submit('Set')}}
+                        {{--{{Form::submit('Set')}}--}}
                         {!! Form::close() !!}
 
                         <script>
