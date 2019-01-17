@@ -231,4 +231,6 @@ return [
 
     ],
 
+    'log'=>'errorlog',
+
 ];

@@ -205,7 +205,7 @@ class PostsController extends Controller
             $user = User::find(auth()->id());
             $user_bud = $user->bud;
             $post = Post::find($id);
-            if ($post->bud == $user_bud){
+            if ($post->bud == $user_bud || $user_bud == 'All'){
                 $post->delete();
             }
             else{
